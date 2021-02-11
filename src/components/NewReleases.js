@@ -32,14 +32,14 @@ const NewReleases = () => {
     }
   };
 
-  const fetchTracks = async (id) => {
+  const fetchTracks = async (id, artist, title, cover) => {
     try {
       if (list.length > 0 && id === idTracker) {
         setList([]);
         setDisplayList(false);
         setIdTracker();
       } else {
-        const response = await getTracks(id);
+        const response = await getTracks(id, artist, title, cover);
         setList(response);
         setDisplayList(true);
         setIdTracker(id);
@@ -49,6 +49,26 @@ const NewReleases = () => {
       setErrorMessage(error);
       setLoading(false);
     }
+  };
+
+  const removeToLib = (id) => {
+    const idx = list.findIndex((song) => song.id === id);
+
+    let newLi = [...list];
+
+    newLi[idx] = { ...newLi[idx], added: false };
+
+    setList(newLi);
+  };
+
+  const addToLib = (id) => {
+    const idx = list.findIndex((song) => song.id === id);
+
+    let newLi = [...list];
+
+    newLi[idx] = { ...newLi[idx], added: true };
+
+    setList(newLi);
   };
 
   const dataToDisplay = errorMessage ? (
@@ -67,7 +87,13 @@ const NewReleases = () => {
           />
         ))}
       </div>
-      {displayList && <AlbumList tracks={list} />}
+      {displayList && (
+        <AlbumList
+          tracks={list}
+          addToLib={addToLib}
+          removeToLib={removeToLib}
+        />
+      )}
     </div>
   );
 

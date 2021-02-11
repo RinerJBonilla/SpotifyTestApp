@@ -65,7 +65,7 @@ export const getNewReleases = async ({ country }) => {
   }
 };
 
-export const getTracks = async (id) => {
+export const getTracks = async (id, artist, title, cover) => {
   try {
     const currentToken = Cookies.get("spotifyAuthToken");
     if (!currentToken) {
@@ -90,6 +90,10 @@ export const getTracks = async (id) => {
       newRes.push({
         id: items[i].id,
         name: items[i].name,
+        artist: artist,
+        album: title,
+        cover: cover,
+        added: false,
       });
     }
 
@@ -133,6 +137,8 @@ export const getResults = async (query) => {
         name: items[i].name,
         artist: items[i].artists[0].name,
         album: items[i].album.name,
+        cover: items[i].album.images[0].url,
+        added: false,
       });
     }
 

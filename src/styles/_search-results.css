@@ -20,3 +20,9 @@
   width: 20%;
   margin: 0.5rem 1rem;
 }
+
+.list-track .btn {
+  width: 2.5rem;
+  height: 2.5rem;
+  margin: auto 0.3rem;
+}

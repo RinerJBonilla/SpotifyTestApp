@@ -1,0 +1,15 @@
+.library-result {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: left;
+}
+
+.library-track {
+  width: 20%;
+  text-align: center;
+  margin: 1rem;
+}
+
+.library-track img {
+  width: 90%;
+}

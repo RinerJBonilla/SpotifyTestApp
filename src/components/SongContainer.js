@@ -6,7 +6,7 @@ const SongContainer = ({ id, artist, title, cover, fetchTracks }) => {
   return (
     <div className="song-container">
       <img
-        onClick={() => fetchTracks(id)}
+        onClick={() => fetchTracks(id, artist, title, cover)}
         className="song-cover"
         src={cover}
         alt="title"

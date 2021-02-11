@@ -1,0 +1,19 @@
+.releases-track {
+  margin: 0 auto;
+  width: 50%;
+  background: rgb(228, 228, 228);
+}
+.news-track {
+  display: flex;
+  justify-content: center;
+}
+
+.news-track p {
+  width: 60%;
+  margin: 0.5rem;
+}
+
+.news-track .btn {
+  width: 2.5rem;
+  margin: 0.3rem;
+}

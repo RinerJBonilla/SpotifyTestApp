@@ -2,9 +2,14 @@ import React from "react";
 import { useSelector } from "react-redux";
 
 import "../styles/_search-results.css";
+import CheckLibrary from "./CheckLibrary";
 
 const SearchResults = () => {
   const ResultsData = useSelector((state) => state.results);
+
+  const addToLib = (id) => {};
+
+  const removeToLib = (id) => {};
 
   return (
     <div className="search-result">
@@ -16,6 +21,11 @@ const SearchResults = () => {
               <p className="track-name">{song.name}</p>
               <p className="track-artist">{song.artist}</p>
               <p className="track-album">{song.album}</p>
+              <CheckLibrary
+                song={song}
+                addToLib={addToLib}
+                removeToLib={removeToLib}
+              />
             </div>
           ))
         ) : (
