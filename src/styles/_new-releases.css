@@ -1,0 +1,5 @@
+.nr-container {
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+}

@@ -1,0 +1,17 @@
+.song-container {
+  width: 20%;
+  text-align: center;
+  margin: 1.5rem;
+}
+
+.song-container .song-cover {
+  width: 100%;
+}
+
+.song-container .song-data {
+  text-align: center;
+}
+
+.song-container h5 {
+  font-weight: bold;
+}

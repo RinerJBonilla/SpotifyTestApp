@@ -1,0 +1,22 @@
+.list-track {
+  background: rgb(221, 221, 221);
+  display: flex;
+  margin: 1.5rem auto;
+  text-align: left;
+}
+
+.list-track .track-name {
+  width: 25%;
+  margin: 0.5rem 1rem;
+  font-weight: bold;
+}
+
+.list-track .track-artist {
+  width: 15%;
+  margin: 0.5rem 1rem;
+}
+
+.list-track .track-album {
+  width: 20%;
+  margin: 0.5rem 1rem;
+}
