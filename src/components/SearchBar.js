@@ -3,7 +3,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 
 import "../styles/_search-bar.css";
 import { useDispatch } from "react-redux";
-import { addResultsSongs } from "../store/index";
+import { addResultsSongs, removeResultsSongs } from "../store/index";
 import { getResults } from "../auth/server";
 
 const SearchBar = () => {
@@ -18,6 +18,8 @@ const SearchBar = () => {
       console.log(query);
       const response = await getResults(query);
       dispatch(addResultsSongs(response));
+    } else {
+      dispatch(removeResultsSongs());
     }
   };
 

@@ -42,8 +42,8 @@ const Spotify = () => {
         </div>
       ) : (
         <SpotifyAuth
-          redirectUri="http://localhost:3000/"
-          clientID="c4a87453db234f82a4c621f36efe4686"
+          redirectUri={process.env.REACT_APP_REDIRECT_URI}
+          clientID={process.env.REACT_APP_SPOTIFY_CLIENT_ID}
           scopes={[
             Scopes.userReadPrivate,
             Scopes.userReadEmail,

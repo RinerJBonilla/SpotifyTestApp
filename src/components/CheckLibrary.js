@@ -13,12 +13,14 @@ const CheckLibrary = ({ song, addToLib, removeToLib }) => {
     if (sang) {
       addToLib(song.id);
       setFlag(true);
+    } else {
+      setFlag(false);
     }
   };
 
   useEffect(() => {
     refreshSong();
-  }, []);
+  }, [song]);
 
   const removeSong = () => {
     //console.log(song.id);
