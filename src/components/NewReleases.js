@@ -26,7 +26,7 @@ const NewReleases = () => {
       setNrs(response);
       setLoading(false);
     } catch (error) {
-      console.log(error);
+      //console.log(error);
       setErrorMessage(error);
       setLoading(false);
     }
@@ -45,7 +45,7 @@ const NewReleases = () => {
         setIdTracker(id);
       }
     } catch (error) {
-      console.log(error);
+      //console.log(error);
       setErrorMessage(error);
       setLoading(false);
     }

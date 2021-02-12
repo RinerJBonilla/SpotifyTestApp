@@ -13,11 +13,11 @@ const MyLibrary = () => {
     try {
       const res = await getLibraryFirebase(userData.user.id);
       if (res) {
-        console.log(res);
+        //console.log(res);
         dispatch(setLibrary(res));
       }
     } catch (error) {
-      console.log(error);
+      //console.log(error);
     }
   };
 

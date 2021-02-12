@@ -18,7 +18,7 @@ const Spotify = () => {
         dispatch(setUser(response));
       }
     } catch (error) {
-      console.log(error);
+      //console.log(error);
     }
   };
 

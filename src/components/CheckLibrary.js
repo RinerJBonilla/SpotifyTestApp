@@ -36,7 +36,7 @@ const CheckLibrary = ({ song, addToLib, removeToLib }) => {
         dispatch(deleteLibrarySong(song.id));
       })
       .catch((err) => {
-        console.log(err);
+        //console.log(err);
       });
     setFlag(false);
   };
@@ -49,7 +49,7 @@ const CheckLibrary = ({ song, addToLib, removeToLib }) => {
         dispatch(addLibrary(song));
       })
       .catch((err) => {
-        console.log(err);
+        //console.log(err);
       });
     //dispatch(addLibrary(song));
     setFlag(true);

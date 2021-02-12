@@ -15,7 +15,7 @@ const SearchBar = () => {
     /*SEND QUERY */
 
     if (query && query.length > 0) {
-      console.log(query);
+      //console.log(query);
       const response = await getResults(query);
       dispatch(addResultsSongs(response));
     } else {

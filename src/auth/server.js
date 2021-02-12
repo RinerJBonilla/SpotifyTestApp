@@ -12,7 +12,7 @@ export const setUserData = async (token) => {
     };
     const response = await axios.get("https://api.spotify.com/v1/me", config);
 
-    console.log(response);
+    //console.log(response);
 
     const newSession = {
       id: response.data.id,
@@ -24,7 +24,7 @@ export const setUserData = async (token) => {
 
     return newSession;
   } catch (error) {
-    console.log(error);
+    //console.log(error);
     return Error(error);
   }
 };
@@ -60,7 +60,7 @@ export const getNewReleases = async ({ country }) => {
 
     return newRes;
   } catch (error) {
-    console.log(error);
+    //console.log(error);
     return Error(error);
   }
 };
@@ -99,7 +99,7 @@ export const getTracks = async (id, artist, title, cover) => {
 
     return newRes;
   } catch (error) {
-    console.log(error);
+    //console.log(error);
     return Error(error);
   }
 };
@@ -127,7 +127,7 @@ export const getResults = async (query) => {
       "&type=track&limit=20";
 
     const response = await axios.get(path, config);
-    console.log(response);
+    //console.log(response);
     const items = response.data.tracks.items;
 
     let newRes = [];
@@ -144,7 +144,7 @@ export const getResults = async (query) => {
 
     return newRes;
   } catch (error) {
-    console.log(error);
+    //console.log(error);
     return Error(error);
   }
 };
