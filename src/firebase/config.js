@@ -3,13 +3,13 @@ import "firebase/database";
 import "firebase/storage";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyB0_Aqz_HuKq1pXZJsLs-PnWgzLv9lUzDY",
-  authDomain: "spotify-app-b67cc.firebaseapp.com",
-  projectId: "spotify-app-b67cc",
-  storageBucket: "spotify-app-b67cc.appspot.com",
-  messagingSenderId: "145900616897",
-  appId: "1:145900616897:web:d6d29291a8ca2863b32840",
-  measurementId: "G-Z2XGKVT632",
+  apiKey: process.env.REACT_APP_FB_API_KEY,
+  authDomain: process.env.REACT_APP_FB_AUTH_DOM,
+  projectId: process.env.REACT_APP_FB_PRO_ID,
+  storageBucket: process.env.REACT_APP_FB_STORE_BK,
+  messagingSenderId: process.env.REACT_APP_FB_MESSAGING_ID,
+  appId: process.env.REACT_APP_FB_APP_ID,
+  measurementId: process.env.REACT_APP_FB_MEASURE_ID,
 };
 
 firebase.initializeApp(firebaseConfig);
