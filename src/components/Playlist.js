@@ -17,15 +17,19 @@ const Playlist = () => {
       {LibraryData.library.length > 0 ? (
         LibraryData.library.map((song, index) => (
           <div key={"lb-" + index} className="library-track">
-            <img src={song.cover} />
-            <p className="lib-name">{song.name}</p>
-            <p className="lib-artist">{song.artist}</p>
-            <p className="lib-album">{song.album}</p>
-            <CheckLibrary
-              song={song}
-              addToLib={addToLib}
-              removeToLib={removeToLib}
-            />
+            <div className="d-mobile">
+              <img src={song.cover} />
+            </div>
+            <div className="d-mobile">
+              <p className="lib-name">{song.name}</p>
+              <p className="lib-artist">{song.artist}</p>
+              <p className="lib-album">{song.album}</p>
+              <CheckLibrary
+                song={song}
+                addToLib={addToLib}
+                removeToLib={removeToLib}
+              />
+            </div>
           </div>
         ))
       ) : (

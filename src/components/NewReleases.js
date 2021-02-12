@@ -75,6 +75,7 @@ const NewReleases = () => {
     <div>{errorMessage}</div>
   ) : (
     <div>
+      <h2>NEW RELEASES</h2>
       <div className="nr-container">
         {nrs.map((song, index) => (
           <SongContainer

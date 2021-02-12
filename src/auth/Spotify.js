@@ -61,6 +61,7 @@ const Spotify = () => {
           ]}
           noLogo={true}
           title="Login"
+          btnClassName="btn btn-warning"
           onAccessToken={(token) => {
             setSession(token);
           }}
