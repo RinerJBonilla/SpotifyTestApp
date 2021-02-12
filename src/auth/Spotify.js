@@ -38,7 +38,7 @@ const Spotify = () => {
     Cookies.remove("spotifyAuthToken", {
       path: dev ? "" : "react-spotify-auth",
     });
-    window.location = dev ? "/" : "/react-spotify-auth";
+    window.location = "https://spotify-test-ab921.firebaseapp.com/";
     setToken(null);
   };
 
@@ -52,7 +52,7 @@ const Spotify = () => {
         </div>
       ) : (
         <SpotifyAuth
-          redirectUri={process.env.REACT_APP_REDIRECT_URI}
+          redirectUri="https://spotify-test-ab921.firebaseapp.com/"
           clientID={process.env.REACT_APP_SPOTIFY_CLIENT_ID}
           scopes={[
             Scopes.userReadPrivate,
