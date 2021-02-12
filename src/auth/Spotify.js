@@ -3,7 +3,7 @@ import { SpotifyAuth, Scopes } from "react-spotify-auth";
 import Cookies from "js-cookie";
 import { setUserData } from "./server";
 import { useDispatch } from "react-redux";
-import { setUser } from "../store/index";
+import { setUser, removeUser } from "../store/index";
 
 const dev = !process.env.NODE_ENV || process.env.NODE_ENV === "development";
 
@@ -22,8 +22,16 @@ const Spotify = () => {
     }
   };
 
+  const checkSession = () => {
+    if (Cookies.get("spotifyAuthToken")) {
+      setToken(Cookies.get("spotifyAuthToken"));
+    } else {
+      dispatch(removeUser());
+    }
+  };
+
   useEffect(async () => {
-    setToken(Cookies.get("spotifyAuthToken"));
+    checkSession();
   }, [Cookies.get("spotifyAuthToken")]);
 
   const removeCookie = () => {

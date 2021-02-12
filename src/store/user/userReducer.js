@@ -5,7 +5,7 @@ const initialState = {
     id: "",
     userName: "please login",
     imageIcon:
-      "https://lh3.googleusercontent.com/proxy/Taji84zSnnaStRZ2wLW8vAmnbCyjJEavXOsZjsrnHOA-y2MEbMdBrFsJZpNVa31Rxh-wRYTfmVe9SnrZszdWnwmihMKCazQVRLkFvjUle6aQ4OjJxaMoVdK9wAOYgttYTBqIH7w5Dnc",
+      "https://toppng.com/public/uploads/preview/user-account-management-logo-user-icon-11562867145a56rus2zwu.png",
     isLoggedIn: false,
     country: "",
   },
@@ -23,7 +23,7 @@ const userReducer = (state = initialState, { type, payload }) => {
           id: "",
           userName: "",
           imageIcon:
-            "https://lh3.googleusercontent.com/proxy/Taji84zSnnaStRZ2wLW8vAmnbCyjJEavXOsZjsrnHOA-y2MEbMdBrFsJZpNVa31Rxh-wRYTfmVe9SnrZszdWnwmihMKCazQVRLkFvjUle6aQ4OjJxaMoVdK9wAOYgttYTBqIH7w5Dnc",
+            "https://toppng.com/public/uploads/preview/user-account-management-logo-user-icon-11562867145a56rus2zwu.png",
           isLoggedIn: false,
         },
       };

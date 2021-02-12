@@ -11,7 +11,6 @@ const CheckLibrary = ({ song, addToLib, removeToLib }) => {
   const refreshSong = () => {
     const sang = LibraryData.library.find((el) => el.id === song.id);
     if (sang) {
-      addToLib(song.id);
       setFlag(true);
     } else {
       setFlag(false);
@@ -20,7 +19,7 @@ const CheckLibrary = ({ song, addToLib, removeToLib }) => {
 
   useEffect(() => {
     refreshSong();
-  }, [song]);
+  }, [song.id]);
 
   const removeSong = () => {
     //console.log(song.id);
