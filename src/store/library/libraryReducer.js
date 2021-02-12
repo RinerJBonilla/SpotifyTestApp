@@ -2,6 +2,7 @@ import {
   SAVE_LIBRARY_SONG,
   ADD_LIBRARY_SONG,
   DELETE_LIBRARY_SONG,
+  SET_LIBRARY_SONGS,
 } from "./libraryActions";
 
 const initialState = {
@@ -19,6 +20,10 @@ const libraryReducer = (state = initialState, { type, payload }) => {
       return {
         ...state,
         library: state.library.filter((song) => song.id !== payload),
+      };
+    case SET_LIBRARY_SONGS:
+      return {
+        library: payload,
       };
     default:
       return state;

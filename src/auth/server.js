@@ -15,7 +15,7 @@ export const setUserData = async (token) => {
     console.log(response);
 
     const newSession = {
-      id: response.data.email,
+      id: response.data.id,
       userName: response.data.display_name,
       imageIcon: response.data.images[0].url,
       isLoggedIn: true,
