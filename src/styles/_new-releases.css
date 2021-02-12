@@ -1,5 +1,28 @@
 .nr-container {
   display: flex;
   justify-content: center;
-  overflow: hidden;
+  overflow: auto;
+}
+
+@media only screen and (max-width: 425px) {
+  .nr-container {
+    list-style: none;
+    padding: 0;
+    margin: 2rem;
+    white-space: nowrap;
+    display: flex;
+    width: auto;
+    overflow-x: auto;
+    padding: 1rem;
+    align-items: center;
+    justify-content: flex-start;
+  }
+  .nr-container .song-container {
+    flex: 0 0 15em;
+    width: 10rem;
+  }
+
+  .nr-container .song-container h5 {
+    font-size: 100%;
+  }
 }

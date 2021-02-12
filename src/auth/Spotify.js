@@ -43,10 +43,12 @@ const Spotify = () => {
   };
 
   return (
-    <div className="container">
+    <div>
       {token ? (
         <div>
-          <button onClick={removeCookie}>Logout</button>
+          <button type="button" class="btn btn-dark" onClick={removeCookie}>
+            Logout
+          </button>
         </div>
       ) : (
         <SpotifyAuth

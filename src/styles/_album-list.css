@@ -17,3 +17,15 @@
   width: 2.5rem;
   margin: 0.3rem;
 }
+
+@media only screen and (max-width: 768px) {
+  .releases-track {
+    width: 70%;
+  }
+}
+
+@media only screen and (max-width: 425px) {
+  .releases-track {
+    width: 90%;
+  }
+}

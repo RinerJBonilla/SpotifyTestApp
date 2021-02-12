@@ -28,11 +28,11 @@ const MyLibrary = () => {
   useEffect(() => {}, []);
   return userData.user.isLoggedIn ? (
     <div>
-      <div>this is your library</div>
+      <h3>This is your library</h3>
       <Playlist />
     </div>
   ) : (
-    <div>Login In to check your Current Library</div>
+    <h3>Login In to check your Current Library</h3>
   );
 };
 
